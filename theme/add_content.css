@@ -1,0 +1,9 @@
+.view-id-host_disease_descriptions .attachment {
+  margin-bottom: 15px;
+}
+
+ul.pager li.pager-all {
+    height: 16px !important;
+    margin: 0 2px !important;
+    width: 20px !important;
+}
