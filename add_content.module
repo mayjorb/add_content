@@ -85,7 +85,7 @@ function add_content_admin_settings_submit($form, &$form_state)	{
 
   $text = $form_state['values']['content'];  
   $text = str_replace(array("\xe2\x80\x98", "\xe2\x80\x99", "\xe2\x80\x9c", "\xe2\x80\x9d", "\xe2\x80\x93", "\xe2\x80\x94", "\xe2\x80\xa6"), array("'", "'", '"', '"', '-', '-', '&hellip;'), $text);
-  $text = str_replace(array(chr(145), chr(146), chr(147), chr(148), chr(150), chr(151), chr(45), chr(133)), array("'", "'", '"', '"', '-', '-', ',', '&hellip;'), $text);
+  $text = str_replace(array(chr(145), chr(146), chr(147), chr(148), chr(150), chr(151), chr(133)), array("'", "'", '"', '"', '-', '-', '&hellip;'), $text);
   $text = trim($text);
   
   $handbook_data = split_text($text);
@@ -244,7 +244,7 @@ function add_content_admin_settings_submit($form, &$form_state)	{
   }
   fclose($handle);
 
-  $message = 'PNW Handbook content has been updated. Click <a href="' . base_path() . file_directory_path() . '/update_logs/' . date('U') . '_update_log.txt">here</a> to view update log.';
+  $message = 'PNW Handbook content has been updated. Click <a target="_blank" href="' . base_path() . file_directory_path() . '/update_logs/' . date('U') . '_update_log.txt">here</a> to view update log.';
   drupal_set_message(t($message));
 }
 
