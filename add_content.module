@@ -214,7 +214,7 @@ function add_content_admin_settings_submit($form, &$form_state)	{
     mkdir('./' . file_directory_path() . '/update_logs/');
   }
 
-  $logfile = './' . file_directory_path() . '/update_logs/' . date('U') . '_update_log.txt';
+  $logfile = './' . file_directory_path() . '/update_logs/' . date('Y-m-d-h-s-a') . '_update_log.txt';
   $handle = fopen($logfile, "a");
 
   fwrite($handle, "\n\n");
